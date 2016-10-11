@@ -16,7 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //根视图控制器
+        configRootVC()
+        
         return true
+    }
+    
+    func configRootVC(){
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        window?.rootViewController = CSTabBarController()
+        
+        window?.makeKeyAndVisible()
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {

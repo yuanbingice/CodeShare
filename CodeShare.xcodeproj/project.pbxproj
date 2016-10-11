@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C7388F0961AF6DB7C5F49BA /* Pods_CodeShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484CD8702742FAD5CBDA18BB /* Pods_CodeShare.framework */; };
+		BC1F79E01DACBEF30038634C /* CSRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F79DF1DACBEF30038634C /* CSRegisterViewController.swift */; };
+		BCED9F491DAC829C0008CF8F /* CSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCED9F481DAC829C0008CF8F /* CSLoginViewController.swift */; };
 		BCFEA7F61DAC787400E70064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFEA7F51DAC787400E70064 /* AppDelegate.swift */; };
 		BCFEA7F81DAC787400E70064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFEA7F71DAC787400E70064 /* ViewController.swift */; };
 		BCFEA7FB1DAC787400E70064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFEA7F91DAC787400E70064 /* Main.storyboard */; };
 		BCFEA7FD1DAC787400E70064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFEA7FC1DAC787400E70064 /* Assets.xcassets */; };
 		BCFEA8001DAC787400E70064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFEA7FE1DAC787400E70064 /* LaunchScreen.storyboard */; };
+		BCFEA80B1DAC79D800E70064 /* CSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFEA80A1DAC79D800E70064 /* CSTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BDDD5549CE17CDE51AAC901 /* Pods-CodeShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeShare/Pods-CodeShare.debug.xcconfig"; sourceTree = "<group>"; };
+		484CD8702742FAD5CBDA18BB /* Pods_CodeShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1F79DF1DACBEF30038634C /* CSRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSRegisterViewController.swift; sourceTree = "<group>"; };
+		BCED9F481DAC829C0008CF8F /* CSLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSLoginViewController.swift; sourceTree = "<group>"; };
 		BCFEA7F21DAC787400E70064 /* CodeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFEA7F51DAC787400E70064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCFEA7F71DAC787400E70064 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,8 @@
 		BCFEA7FC1DAC787400E70064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCFEA7FF1DAC787400E70064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCFEA8011DAC787400E70064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCFEA80A1DAC79D800E70064 /* CSTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSTabBarController.swift; sourceTree = "<group>"; };
+		C017B1798BB91F99FB67B789 /* Pods-CodeShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeShare/Pods-CodeShare.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7388F0961AF6DB7C5F49BA /* Pods_CodeShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F37EF28221880138D0FBD6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				484CD8702742FAD5CBDA18BB /* Pods_CodeShare.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A4ED9BA0231CB5F3EAA722E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BDDD5549CE17CDE51AAC901 /* Pods-CodeShare.debug.xcconfig */,
+				C017B1798BB91F99FB67B789 /* Pods-CodeShare.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BCFEA7E91DAC787300E70064 = {
 			isa = PBXGroup;
 			children = (
 				BCFEA7F41DAC787400E70064 /* CodeShare */,
 				BCFEA7F31DAC787400E70064 /* Products */,
+				5A4ED9BA0231CB5F3EAA722E /* Pods */,
+				0F37EF28221880138D0FBD6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +84,9 @@
 		BCFEA7F41DAC787400E70064 /* CodeShare */ = {
 			isa = PBXGroup;
 			children = (
+				BCFEA8071DAC794600E70064 /* Views */,
+				BCFEA8081DAC794600E70064 /* Models */,
+				BCFEA8091DAC794600E70064 /* Controllers */,
 				BCFEA7F51DAC787400E70064 /* AppDelegate.swift */,
 				BCFEA7F71DAC787400E70064 /* ViewController.swift */,
 				BCFEA7F91DAC787400E70064 /* Main.storyboard */,
@@ -64,6 +97,30 @@
 			path = CodeShare;
 			sourceTree = "<group>";
 		};
+		BCFEA8071DAC794600E70064 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BCFEA8081DAC794600E70064 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BCFEA8091DAC794600E70064 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCFEA80A1DAC79D800E70064 /* CSTabBarController.swift */,
+				BCED9F481DAC829C0008CF8F /* CSLoginViewController.swift */,
+				BC1F79DF1DACBEF30038634C /* CSRegisterViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCFEA8041DAC787400E70064 /* Build configuration list for PBXNativeTarget "CodeShare" */;
 			buildPhases = (
+				3DCD5FFDDC3B59262FF12906 /* [CP] Check Pods Manifest.lock */,
 				BCFEA7EE1DAC787400E70064 /* Sources */,
 				BCFEA7EF1DAC787400E70064 /* Frameworks */,
 				BCFEA7F01DAC787400E70064 /* Resources */,
+				FB4D782C1E16001B5DBBA75A /* [CP] Embed Pods Frameworks */,
+				83C63CCBD7FC0B7B935DC2C0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +191,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DCD5FFDDC3B59262FF12906 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		83C63CCBD7FC0B7B935DC2C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeShare/Pods-CodeShare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB4D782C1E16001B5DBBA75A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeShare/Pods-CodeShare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCFEA7EE1DAC787400E70064 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCED9F491DAC829C0008CF8F /* CSLoginViewController.swift in Sources */,
 				BCFEA7F81DAC787400E70064 /* ViewController.swift in Sources */,
+				BCFEA80B1DAC79D800E70064 /* CSTabBarController.swift in Sources */,
+				BC1F79E01DACBEF30038634C /* CSRegisterViewController.swift in Sources */,
 				BCFEA7F61DAC787400E70064 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +357,7 @@
 		};
 		BCFEA8051DAC787400E70064 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BDDD5549CE17CDE51AAC901 /* Pods-CodeShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CodeShare/Info.plist;
@@ -257,6 +369,7 @@
 		};
 		BCFEA8061DAC787400E70064 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C017B1798BB91F99FB67B789 /* Pods-CodeShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CodeShare/Info.plist;
@@ -285,6 +398,7 @@
 				BCFEA8061DAC787400E70064 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
