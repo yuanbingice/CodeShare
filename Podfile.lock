@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (3.4.1)
+  - FDFullscreenPopGesture (1.1)
+  - IQKeyboardManager (3.3.7)
+  - JKCategories (1.3)
+  - MOBFoundation_IDFA (2.0.8)
+  - ReactiveCocoa (4.2.1):
+    - Result (~> 2.0)
+  - Result (2.1.3)
+  - SMSSDK (2.0.5)
+  - SnapKit (0.21.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - FDFullscreenPopGesture
+  - IQKeyboardManager (~> 3.0)
+  - JKCategories
+  - MOBFoundation_IDFA
+  - ReactiveCocoa (~> 4.0)
+  - SMSSDK
+  - SnapKit (~> 0.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  JKCategories: 610e9773cab21a3952f5dfa6ecae35fd48631dbc
+  MOBFoundation_IDFA: 7952e1ec75970779010ab17afe81c84fea990d8a
+  ReactiveCocoa: 5a42745f11ea236f405bb9ce5e97c5e3b23562dd
+  Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
+  SMSSDK: 85375419fc969dc9398ce9922c5165c1e14ebe23
+  SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
+
+PODFILE CHECKSUM: df1411ef7b164eb2013fcce2d0200c07a1a65f94
+
+COCOAPODS: 1.0.1

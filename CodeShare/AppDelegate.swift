@@ -15,14 +15,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // Override point for customization after application
         
         //根视图控制器
         configRootVC()
         
+        //设置MobSMSSDK
+        setupMob()
+        
         return true
     }
     
+    func setupMob(){
+        
+        SMSSDK.registerApp(MobApp, withSecret: MobSecret)
+        
+        
+    }
+    
+    
+    //根视图控制器
     func configRootVC(){
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
