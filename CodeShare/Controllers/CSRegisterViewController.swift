@@ -356,6 +356,8 @@ class CSRegisterViewController: UIViewController {
         
         
         
+        //MARK: 处理键盘的遮挡问题
+        
         //处理键盘遮挡视图的问题(代替通知)  //键盘的frame将要改变
         NSNotificationCenter.defaultCenter().rac_addObserverForName(UIKeyboardWillChangeFrameNotification, object: nil)
         .subscribeNext { (noti) in
