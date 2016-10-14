@@ -8,11 +8,22 @@
 
 import Foundation
 
+//视频模型
 class CSMyVideoModel: NSObject {
     
     var title: String = ""
     var imageUrl = ""
     var videoUrl = ""
     var videoSize = ""
+    
+}
+
+//我的文件模型
+class CSMyFileModel: NSObject {
+    
+    var title: String = ""
+    var imageUrl = ""
+    var fileSize = ""
+    var form = ""
     
 }

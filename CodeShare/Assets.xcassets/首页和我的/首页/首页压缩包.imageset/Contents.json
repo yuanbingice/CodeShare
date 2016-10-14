@@ -2,16 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "首页压缩包.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "首页压缩包.png",
+      "filename" : "首页压缩包@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "首页压缩包@3x.png"
     }
   ],
   "info" : {

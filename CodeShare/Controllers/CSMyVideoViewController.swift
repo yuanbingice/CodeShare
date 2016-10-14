@@ -9,13 +9,24 @@
 import UIKit
 import YYModel
 
+//我的视频 页面控制(继承基类的表格视图控制器类)
 class CSMyVideoViewController: CSTableViewController {
 
     //构造假数据
     var cellInfos: [[String:String]] = []
     
     //模拟数据模型
-    var cellModel: AnyObject = []
+    var cellModel: [AnyObject] = []
+    
+    //重写该方法,将style写死  //创建时会调用该方法(指定构造器)
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(withStyle: .Plain)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +55,22 @@ class CSMyVideoViewController: CSTableViewController {
                 "videoUrl": "http://www.baidu.com"
             ],
             [
-                "title": "杭州铁笼沉尸案主犯获死刑",
+                "title": "河南政府吃饭打白条欠120万，字数不够还得凑",
+                "imageUrl": "视频",
+                "videoUrl": "http://www.baidu.com"
+            ],
+            [
+                "title": "河南政府吃饭打白条欠120万，字数不够还得凑",
+                "imageUrl": "视频",
+                "videoUrl": "http://www.baidu.com"
+            ],
+            [
+                "title": "河南政府吃饭打白条欠120万，字数不够还得凑",
+                "imageUrl": "视频",
+                "videoUrl": "http://www.baidu.com"
+            ],
+            [
+                "title": "河南政府吃饭打白条欠120万，字数不够还得凑",
                 "imageUrl": "视频",
                 "videoUrl": "http://www.baidu.com"
             ],
@@ -54,15 +80,31 @@ class CSMyVideoViewController: CSTableViewController {
                 "videoUrl": "http://www.baidu.com"
             ],
             [
+                "title": "河南政府吃饭打白条欠120万，字数不够还得凑",
+                "imageUrl": "视频",
+                "videoUrl": "http://www.baidu.com"
+            ],
+            [
                 "title": "杭州铁笼沉尸案主犯获死刑",
+                "imageUrl": "视频",
+                "videoUrl": "http://www.baidu.com"
+            ],
+            [
+                "title": "河南政府吃饭打白条欠120万，字数不够还得凑",
+                "imageUrl": "视频",
+                "videoUrl": "http://www.baidu.com"
+            ],
+            [
+                "title": "河南政府吃饭打白条欠120万，字数不够还得凑",
                 "imageUrl": "视频",
                 "videoUrl": "http://www.baidu.com"
             ],
         ]
         
-        //给model赋值
+        //给model赋值(利用YYKit中的YYModel,用起来比利用KVC方便)
         cellModel = NSArray.yy_modelArrayWithClass(CSMyVideoModel.self, json: cellInfos)!
         
+        //刷新表格视图
         self.tableView.reloadData()
     }
     
@@ -72,6 +114,8 @@ class CSMyVideoViewController: CSTableViewController {
     }
 
 }
+
+//MARK: 表格视图的代理
 
 extension CSMyVideoViewController{
     
@@ -87,6 +131,12 @@ extension CSMyVideoViewController{
         cell.configure(withModel: cellModel[indexPath.row] as! CSMyVideoModel)
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        //反选
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
 }

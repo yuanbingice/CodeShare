@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "按钮我的.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "按钮我的.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "按钮我的@2x.png"
     },
     {
       "idiom" : "universal",
+      "filename" : "按钮我的@3x.png",
       "scale" : "3x"
     }
   ],

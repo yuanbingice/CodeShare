@@ -2,16 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "评论图标.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "评论图标.png",
+      "filename" : "评论图标@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "评论图标@3x.png"
     }
   ],
   "info" : {

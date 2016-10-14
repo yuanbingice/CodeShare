@@ -262,6 +262,7 @@ class CSRegisterViewController: ViewController {
             print( sender as! UIButton)
         }
         
+        
         //将变量的改变当做信号来订阅(代替 KVO)
 //        self.rac_observeKeyPath("time", options: NSKeyValueObservingOptions.New, observer: self) { (value, timeInfo, bool1, bool2) in
 //            
@@ -270,6 +271,7 @@ class CSRegisterViewController: ViewController {
         
         //订阅time的变化信息(上边的方法也可以代替KVO)
         //使用mvc的思想,如果数据改变了,界面跟着改变   // 这里面读取到的time一直在变化
+        
         self.rac_valuesForKeyPath("time", observer: self).subscribeNext { (time) in
             
             //先根据time的值 来确定按钮的状态

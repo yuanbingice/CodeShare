@@ -86,6 +86,7 @@ class CSLoginViewController: ViewController {
             make.left.right.equalTo(0)  //左右和父视图的边界都为0
             make.height.equalTo(48)
         }
+        
         password.layer.borderColor = UIColor.grayColor().CGColor
         password.layer.borderWidth = 1.0
         
@@ -171,8 +172,6 @@ class CSLoginViewController: ViewController {
                         
                     }
                 })
-            
-            
         }
         
         //MARK:  导航条上的按钮
@@ -198,7 +197,6 @@ class CSLoginViewController: ViewController {
         
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

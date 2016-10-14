@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+//我的视频自定义cell
 class CSMyVideoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLable: UILabel!
@@ -16,6 +18,7 @@ class CSMyVideoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var videoImageView: UIImageView!
     
+    //配置cell上的内容
     func configure(withModel model: CSMyVideoModel){
         
         titleLable.text = model.title

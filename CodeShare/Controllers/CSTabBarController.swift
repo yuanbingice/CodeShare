@@ -1,10 +1,8 @@
 //
 //  CSTabBarController.swift
 //  CodeShare
-//
 //  Created by ice on 2016/10/11.
 //  Copyright © 2016年 k. All rights reserved.
-//
 
 import UIKit
 
@@ -34,8 +32,8 @@ class CSTabBarController: UITabBarController {
             
             ["title": "主页", "image": "按钮主页", "class": "CodeShare.ViewController"],
             ["title": "消息", "image": "按钮消息", "class": "CodeShare.ViewController"],
-            ["title": "分享", "image": "按钮分享", "class": "CodeShare.ViewController"],
-            ["title": "我的", "image": "按钮我的", "class": "CodeShare.CSMyVideoViewController"]
+            ["title": "分享", "image": "按钮分享", "class": "CodeShare.CSScrollerViewController"],
+            ["title": "我的", "image": "按钮我的", "class": "CodeShare.CSMyInfoViewController"]
         
         ]
         

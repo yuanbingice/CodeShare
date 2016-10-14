@@ -2,16 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "压缩包背景色.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "压缩包背景色.png",
+      "filename" : "压缩包背景色@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "压缩包背景色@3x.png"
     }
   ],
   "info" : {
