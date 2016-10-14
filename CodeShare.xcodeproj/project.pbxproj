@@ -8,7 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4C7388F0961AF6DB7C5F49BA /* Pods_CodeShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484CD8702742FAD5CBDA18BB /* Pods_CodeShare.framework */; };
+		BC1850CE1DAF204E00499006 /* CSNetHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1850CD1DAF204E00499006 /* CSNetHelp.swift */; };
+		BC1850D01DAF3BF500499006 /* CSUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1850CF1DAF3BF500499006 /* CSUserModel.swift */; };
 		BC1F79E01DACBEF30038634C /* CSRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1F79DF1DACBEF30038634C /* CSRegisterViewController.swift */; };
+		BC6A2DE11DAF678E00297827 /* CSHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6A2DE01DAF678E00297827 /* CSHelp.swift */; };
+		BC6A2DE31DAF819300297827 /* CSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6A2DE21DAF819300297827 /* CSTableViewController.swift */; };
+		BCAC9D0F1DAF868800DCC337 /* CSMyVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC9D0E1DAF868800DCC337 /* CSMyVideoViewController.swift */; };
+		BCAC9D111DAF875900DCC337 /* CSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC9D101DAF875900DCC337 /* CSModel.swift */; };
+		BCAC9D141DAF8A4A00DCC337 /* CSMyVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAC9D121DAF8A4A00DCC337 /* CSMyVideoTableViewCell.swift */; };
+		BCAC9D151DAF8A4A00DCC337 /* CSMyVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCAC9D131DAF8A4A00DCC337 /* CSMyVideoTableViewCell.xib */; };
 		BCED9F491DAC829C0008CF8F /* CSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCED9F481DAC829C0008CF8F /* CSLoginViewController.swift */; };
 		BCFEA7F61DAC787400E70064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFEA7F51DAC787400E70064 /* AppDelegate.swift */; };
 		BCFEA7F81DAC787400E70064 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFEA7F71DAC787400E70064 /* ViewController.swift */; };
@@ -22,7 +30,15 @@
 /* Begin PBXFileReference section */
 		2BDDD5549CE17CDE51AAC901 /* Pods-CodeShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeShare/Pods-CodeShare.debug.xcconfig"; sourceTree = "<group>"; };
 		484CD8702742FAD5CBDA18BB /* Pods_CodeShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1850CD1DAF204E00499006 /* CSNetHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSNetHelp.swift; sourceTree = "<group>"; };
+		BC1850CF1DAF3BF500499006 /* CSUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSUserModel.swift; sourceTree = "<group>"; };
 		BC1F79DF1DACBEF30038634C /* CSRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSRegisterViewController.swift; sourceTree = "<group>"; };
+		BC6A2DE01DAF678E00297827 /* CSHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSHelp.swift; sourceTree = "<group>"; };
+		BC6A2DE21DAF819300297827 /* CSTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSTableViewController.swift; sourceTree = "<group>"; };
+		BCAC9D0E1DAF868800DCC337 /* CSMyVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMyVideoViewController.swift; sourceTree = "<group>"; };
+		BCAC9D101DAF875900DCC337 /* CSModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSModel.swift; sourceTree = "<group>"; };
+		BCAC9D121DAF8A4A00DCC337 /* CSMyVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMyVideoTableViewCell.swift; sourceTree = "<group>"; };
+		BCAC9D131DAF8A4A00DCC337 /* CSMyVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSMyVideoTableViewCell.xib; sourceTree = "<group>"; };
 		BCED9F481DAC829C0008CF8F /* CSLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSLoginViewController.swift; sourceTree = "<group>"; };
 		BCFEA7F21DAC787400E70064 /* CodeShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFEA7F51DAC787400E70064 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +82,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BC1850CC1DAF200000499006 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				BC1850CD1DAF204E00499006 /* CSNetHelp.swift */,
+				BC6A2DE01DAF678E00297827 /* CSHelp.swift */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
 		BCFEA7E91DAC787300E70064 = {
 			isa = PBXGroup;
 			children = (
@@ -88,16 +113,17 @@
 		BCFEA7F41DAC787400E70064 /* CodeShare */ = {
 			isa = PBXGroup;
 			children = (
+				BC1850CC1DAF200000499006 /* Help */,
 				BCFEA8071DAC794600E70064 /* Views */,
 				BCFEA8081DAC794600E70064 /* Models */,
 				BCFEA8091DAC794600E70064 /* Controllers */,
 				BCFEA7F51DAC787400E70064 /* AppDelegate.swift */,
 				BCFEA7F71DAC787400E70064 /* ViewController.swift */,
+				BCFEF4F01DADD0EE00F7CCA7 /* CodeShare.swift */,
 				BCFEA7F91DAC787400E70064 /* Main.storyboard */,
 				BCFEA7FC1DAC787400E70064 /* Assets.xcassets */,
 				BCFEA7FE1DAC787400E70064 /* LaunchScreen.storyboard */,
 				BCFEA8011DAC787400E70064 /* Info.plist */,
-				BCFEF4F01DADD0EE00F7CCA7 /* CodeShare.swift */,
 			);
 			path = CodeShare;
 			sourceTree = "<group>";
@@ -105,6 +131,8 @@
 		BCFEA8071DAC794600E70064 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BCAC9D121DAF8A4A00DCC337 /* CSMyVideoTableViewCell.swift */,
+				BCAC9D131DAF8A4A00DCC337 /* CSMyVideoTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +140,8 @@
 		BCFEA8081DAC794600E70064 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BC1850CF1DAF3BF500499006 /* CSUserModel.swift */,
+				BCAC9D101DAF875900DCC337 /* CSModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,6 +152,8 @@
 				BCFEA80A1DAC79D800E70064 /* CSTabBarController.swift */,
 				BCED9F481DAC829C0008CF8F /* CSLoginViewController.swift */,
 				BC1F79DF1DACBEF30038634C /* CSRegisterViewController.swift */,
+				BC6A2DE21DAF819300297827 /* CSTableViewController.swift */,
+				BCAC9D0E1DAF868800DCC337 /* CSMyVideoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCFEA8001DAC787400E70064 /* LaunchScreen.storyboard in Resources */,
+				BCAC9D151DAF8A4A00DCC337 /* CSMyVideoTableViewCell.xib in Resources */,
 				BCFEA7FD1DAC787400E70064 /* Assets.xcassets in Resources */,
 				BCFEA7FB1DAC787400E70064 /* Main.storyboard in Resources */,
 			);
@@ -249,8 +282,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC6A2DE11DAF678E00297827 /* CSHelp.swift in Sources */,
+				BC1850CE1DAF204E00499006 /* CSNetHelp.swift in Sources */,
+				BCAC9D141DAF8A4A00DCC337 /* CSMyVideoTableViewCell.swift in Sources */,
 				BCED9F491DAC829C0008CF8F /* CSLoginViewController.swift in Sources */,
+				BCAC9D111DAF875900DCC337 /* CSModel.swift in Sources */,
+				BC1850D01DAF3BF500499006 /* CSUserModel.swift in Sources */,
+				BCAC9D0F1DAF868800DCC337 /* CSMyVideoViewController.swift in Sources */,
 				BCFEA7F81DAC787400E70064 /* ViewController.swift in Sources */,
+				BC6A2DE31DAF819300297827 /* CSTableViewController.swift in Sources */,
 				BCFEA80B1DAC79D800E70064 /* CSTabBarController.swift in Sources */,
 				BC1F79E01DACBEF30038634C /* CSRegisterViewController.swift in Sources */,
 				BCFEF4F11DADD0EE00F7CCA7 /* CodeShare.swift in Sources */,

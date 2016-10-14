@@ -12,7 +12,7 @@ import JKCategories
 import Alamofire
 
 
-class CSLoginViewController: UIViewController {
+class CSLoginViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +20,13 @@ class CSLoginViewController: UIViewController {
         self.title = "登录"
         
         view.backgroundColor = UIColor.whiteColor()
-        
+    
+        //配置UI
         configUI()
         
     }
     
-  
+    
     func configUI(){
         
         //MARK: 用户名输入框
@@ -148,38 +149,34 @@ class CSLoginViewController: UIViewController {
         //MARK: 设置登录按钮的点击事件
         loginBtn.jk_handleControlEvents(UIControlEvents.TouchUpInside) { (sender) in
             
-            //参数中有中文等....必须用URL
-            Alamofire.request(.POST, "https://www.1000phone.tk", parameters: [
+            //使用封装的方法快速进行网络请求
+            CSNetHelp.request(parameters: [
                 "service": "User.Login",
                 "phone": userName.text!,
-                "password": password.text!
-                ], encoding: ParameterEncoding.URLEncodedInURL, headers: nil).responseJSON(completionHandler: { (response) in
+                "password": (password.text! as NSString).jk_md5String
+                ]).responseJSON({ (data, success) in
                     
-                    switch response.result{
+                    if success{ //请求成功
                         
-                    case .Success(let jsonData):
+                        print(data)
                         
-                        print(jsonData)
+                        CSUserModel.login(with: data as! [String: AnyObject])
                         
                         self.navigationController!.dismissViewControllerAnimated(true, completion: nil)
-                    case .Failure(let error):
                         
-                        print(error)
+                    }else{
+                        
+                        
+                        UIAlertView(title: "有错误", message: data as? String, delegate: nil, cancelButtonTitle: "我知道了").show()
                         
                     }
                 })
+            
+            
         }
         
-        
-        //导航条上的按钮
-        let backBtn = UIButton(type: .Custom)
-        backBtn.setImage(UIImage(named: "返回按钮"), forState: .Normal)
-        backBtn.frame = CGRectMake(0, 0, 24, 32)
-        let backBarBtn = UIBarButtonItem(customView: backBtn)
-        backBtn.addTarget(self, action: #selector(self.back), forControlEvents: .TouchUpInside)
-        self.navigationItem.leftBarButtonItem = backBarBtn
-        
-        
+        //MARK:  导航条上的按钮
+
         //导航上的注册按钮
         let registerBtn = UIButton(type: .Custom)
         registerBtn.frame = CGRectMake(0, 0, 44, 32)
@@ -191,11 +188,6 @@ class CSLoginViewController: UIViewController {
         
     }
     
-    //返回按钮的方法
-    func back(){
-        
-        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
-    }
     
     //注册按钮的方法.进入注册页面
     func register(){

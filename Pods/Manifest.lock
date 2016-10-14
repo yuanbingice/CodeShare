@@ -9,6 +9,7 @@ PODS:
   - Result (2.1.3)
   - SMSSDK (2.0.5)
   - SnapKit (0.21.1)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - ReactiveCocoa (~> 4.0)
   - SMSSDK
   - SnapKit (~> 0.0)
+  - YYModel
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
@@ -30,7 +32,8 @@ SPEC CHECKSUMS:
   Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
   SMSSDK: 85375419fc969dc9398ce9922c5165c1e14ebe23
   SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: df1411ef7b164eb2013fcce2d0200c07a1a65f94
+PODFILE CHECKSUM: 791bb570beda6fbe5298dc833166533683a95a06
 
 COCOAPODS: 1.0.1

@@ -30,6 +30,9 @@ target 'CodeShare' do
   # 全屏侧滑返回, 也不需要再添加代码
   pod "FDFullscreenPopGesture"
 
+  #处理model,图片网络加载等等
+  pod "YYModel"
+
   # Pods for CodeShare
 
 end

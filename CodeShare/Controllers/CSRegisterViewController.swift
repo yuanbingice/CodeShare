@@ -9,7 +9,7 @@ import Alamofire
 import ReactiveCocoa
 
 
-class CSRegisterViewController: UIViewController {
+class CSRegisterViewController: ViewController {
     
     dynamic var time = -1   //要观察他的变化,则需要定义为动态的 -1 为正常状态,没有在读秒
     var timer: NSTimer!     //定时器
@@ -123,6 +123,7 @@ class CSRegisterViewController: UIViewController {
         verifyButton.jk_setBackgroundColor(UIColor.whiteColor(), forState: .Normal)
         verifyButton.jk_setBackgroundColor(UIColor.lightGrayColor(), forState: .Disabled)
         verifyButton.jk_setBackgroundColor(UIColor.darkGrayColor(), forState: .Highlighted)
+    
         
         //验证码输入框的右侧视图
         let rightView = UIView()
@@ -309,7 +310,6 @@ class CSRegisterViewController: UIViewController {
                     
                 }else{ //读秒
                     
-                    
                     //开启一个定时器
                     self.timer = NSTimer.jk_scheduledTimerWithTimeInterval(1.0, block: {
                     
@@ -326,34 +326,33 @@ class CSRegisterViewController: UIViewController {
         //MARK: 设置注册按钮的点击事件
         registerBtn.jk_handleControlEvents(UIControlEvents.TouchUpInside) { (sender) in
             
-            //密码用MD5加密
-            Alamofire.request(.POST, "https://www.1000phone.tk", parameters: [
+            //密码用MD5加密  //封装Alamofire
+            CSNetHelp.request(parameters: [
                 "service": "User.Register",
                 "phone": userName.text!,
                 "password": (password.text! as NSString).jk_md5String,
                 "verificationCode": verifyTextField.text!
-                ], encoding: ParameterEncoding.URLEncodedInURL, headers: nil).responseJSON(completionHandler: { (response) in
+                ]).responseJSON { (data, success) in
                     
-                    switch response.result{
+                    if success{  //请求成功
                         
-                    case .Success(let jsonData):
-                        
-                        print(jsonData)
-                        
+                        //返回的肯定是成功的数据
                         self.navigationController?.popViewControllerAnimated(true)
                         
-                    case .Failure(let error):
+                    }else{
                         
-                        print(error)
+                        UIAlertView(title: "有错误", message: data as? String, delegate: nil, cancelButtonTitle: "我知道了").show()
                         
                     }
-                })
+            }
+            
+
         }
+        
         
         //MD5 没有解密过程,只是对数据进行特征加密,会破坏原数据的意义
         
         //真正的加密算法: RAS DES ... 这些加密算法,可以通过密钥解密处原始数据,所以除了密码之外的一些信息,可能会用这种加密方法
-        
         
         
         //MARK: 处理键盘的遮挡问题
@@ -362,11 +361,11 @@ class CSRegisterViewController: UIViewController {
         NSNotificationCenter.defaultCenter().rac_addObserverForName(UIKeyboardWillChangeFrameNotification, object: nil)
         .subscribeNext { (noti) in
             
-            
+            //下面两句只是为了查看信息,找出键盘的尺寸
             let userInfo = (noti as! NSNotification).userInfo
             
-            let rect = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
-            print(rect)
+            let _ = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
+           // print(rect)
             
             //用SnapKit 给注册按钮做一个动画
             //如果更改一个视图的约束,需要使用snp_update
