@@ -11,17 +11,15 @@ import UIKit
 //集合视图的自定义cell
 class CSMyPhotoCollectionViewCell: UICollectionViewCell {
 
-    //添加一个视图  // 用来展示高亮的效果
+    //添加一个视图  // 用来展示点击后变暗的效果
     var mask = UIView()
     
-    
+    let imageView = UIImageView(image: UIImage(named: "图片"))
     
     //重写,因为需要添加一个子视图
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        //固定的
-        let imageView = UIImageView(image: UIImage(named: "图片"))
         self.contentView.addSubview(imageView)  //必须加到contentView上面,与表格视图的cell相似
         
         imageView.snp_makeConstraints { (make) in
@@ -43,7 +41,7 @@ class CSMyPhotoCollectionViewCell: UICollectionViewCell {
     }
 
     
-    //重写高亮状态  // 发生改变时会动画 改变视图的 透明度
+    //重写高亮状态(点击后会是高亮状态)  // 发生改变时会动画 改变视图的 透明度
     override var highlighted: Bool{
         
         didSet{

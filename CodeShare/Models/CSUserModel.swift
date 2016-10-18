@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import YYModel
+import YYKit
 
 
 //用户数据模型
@@ -33,7 +33,7 @@ class CSUserModel: NSObject {
         //取出沙盒数据,配置默认用户
         if let userInfo = NSUserDefaults.standardUserDefaults().objectForKey(String(CSUserModel)) {
             //利用字典来给self赋值
-            self.yy_modelSetWithDictionary(userInfo as! Dictionary)
+            self.modelSetWithDictionary(userInfo as! Dictionary)
         }
         
     }
@@ -56,10 +56,10 @@ class CSUserModel: NSObject {
         //SharedUser.setValuesForKeysWithDictionary(userInfo)
         
         //用YYKit中的YYmodel,给模型类赋值
-        SharedUser.yy_modelSetWithDictionary(userInfo)
+        SharedUser.modelSetWithDictionary(userInfo)
     
         //存到沙盒目录下
-        NSUserDefaults.standardUserDefaults().setObject(SharedUser.yy_modelToJSONObject(), forKey: String(CSUserModel))
+        NSUserDefaults.standardUserDefaults().setObject(SharedUser.modelToJSONObject(), forKey: String(CSUserModel))
         
         //同步
         NSUserDefaults.standardUserDefaults().synchronize()

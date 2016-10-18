@@ -15,6 +15,8 @@ class CSMyInfoViewController: CSScrollerViewController {
      //一个主控制器 //利用第三方库
     var displayController = YZDisplayViewController()
     
+    var headImageView = UIImageView(image: UIImage(named: "头像"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,7 +47,7 @@ class CSMyInfoViewController: CSScrollerViewController {
             make.height.equalTo(140)
         }
         
-        let headImageView = UIImageView(image: UIImage(named: "头像"))
+        
         backImageView.addSubview(headImageView)
         headImageView.snp_makeConstraints { (make) in
             
@@ -82,11 +84,20 @@ class CSMyInfoViewController: CSScrollerViewController {
         setButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         setButton.titleLabel?.font = UIFont.systemFontOfSize(15)
         backImageView.addSubview(setButton)
+        backImageView.userInteractionEnabled = true
         setButton.snp_makeConstraints { (make) in
             
             make.right.equalTo(-16)
             make.centerY.equalTo(0) //Y方向居中
         }
+        
+        setButton.jk_handleControlEvents(.TouchUpInside) { (sender) in
+            
+            let settingVC = CSSettingViewController()
+            settingVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController( settingVC, animated: true)
+        }
+        
         
         //下方三个按钮
         let btnArr = ["12\n我的分享", "2\n我的下载", "1\n我的好友"]
@@ -201,6 +212,15 @@ class CSMyInfoViewController: CSScrollerViewController {
         displayController.titleScrollView.backgroundColor = UIColor(red: 0.7405, green: 0.8365, blue: 0.8648, alpha: 0.8)
         
     }
+    
+    //视图将要显示
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        headImageView.setImageWithURL(NSURL.init(string: CSUserModel.SharedUser.avatar))
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

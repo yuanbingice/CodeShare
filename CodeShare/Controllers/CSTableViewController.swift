@@ -16,11 +16,11 @@ class CSTableViewController: ViewController {
         
         self.style = style
         
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: nil, bundle: nil)  //指定构造器
         
     }
     
-    //该构造方法 是指定构造器, 便利构造器会调用
+    //该构造方法 是指定构造器, 便利构造器会调用 //不重写该方法下面的tableview 是错误类型
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -106,10 +106,13 @@ extension CSTableViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        print("子类重写该方法")
         return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        print("子类重写该方法")
         
         return UITableViewCell()
     }

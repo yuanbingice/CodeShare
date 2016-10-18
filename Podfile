@@ -30,8 +30,26 @@ target 'CodeShare' do
   # 全屏侧滑返回, 也不需要再添加代码
   pod "FDFullscreenPopGesture"
 
-  #处理model,图片网络加载等等
-  pod "YYModel"
+  #处理model(代理kvc赋值),图片网络加载等等
+  pod "YYKit"
+  
+  #方便我们去设置 AttributedString // 简单的图文混排,设置文字属性,设置 label 某些文字的点击事件
+  pod "WPAttributedMarkup"
+  
+  #循环(cycle)滚动的 滚动视图
+  pod "SDCycleScrollView"
+  
+  #大图浏览(browser 浏览器)
+  pod "IDMPhotoBrowser"
+  
+  pod "ZFPlayer"
+  
+  #二维码
+  pod "swiftScan"
+  
+  
+  pod "UzysAssetsPickerController"
+  
 
   # Pods for CodeShare
 

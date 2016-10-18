@@ -70,6 +70,10 @@ extension UICollectionReusableView: Reusable {
 extension UITableView {
 	// 用类名注册 cell
 	// 这里的参数是一个泛型，我们给这个泛型添加了约束，必须继承自 UITableViewCell，必须遵循 Reusable 协议
+    /**
+    封装的注册cell(非xib)
+     */
+    
 	func registerClassOf<T: UITableViewCell where T: Reusable>(_: T.Type) {
 		
 		// 注册时，直接调用系统的注册 cell 方法，传入的 id 是遵循 Reusable 协议的类型的方法，即类名
@@ -78,7 +82,7 @@ extension UITableView {
 	// 从 xib 注册 cell
 	// 如果是用 xib 注册，那么这个类型必须继承自 UITableViewCell 还必须遵循 Reusable 和 NibLoadable 协议
     /**
-     封装为泛型, 获取时就不需要 强转为自定义的cell
+     封装为泛型(xib), 获取时就不需要强转为自定义的cell,需要指定类型
      */
 	func registerNibOf<T: UITableViewCell where T: Reusable, T: NibLoadable>(_: T.Type) {
 		
@@ -99,7 +103,7 @@ extension UITableView {
     
     // 取出复用池中某个类的 cell
     /**
-     封装的方法(泛型),从队列中获取cell
+     封装的方法(泛型),从队列中获取cell,需要指定类型
      */
 	func dequeueReusableCell<T: UITableViewCell where T: Reusable>() -> T {
 		// 判断如果无法通过 id 取出 cell，则用这个 id 创建一个 style 为 Value1 的 cell

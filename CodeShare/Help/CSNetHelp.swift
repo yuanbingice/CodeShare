@@ -29,6 +29,9 @@ public class CSNetHelp: NSObject {
 
 extension Request{
     
+    /**
+     自己封装
+     */
     //封装网络回调方法,可以方便的统一处理错误,在具体数据
     func responseJSON(
         

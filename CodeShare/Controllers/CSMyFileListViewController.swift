@@ -76,7 +76,7 @@ class CSMyFileListViewController: CSTableViewController {
         super.viewDidLoad()
 
         //给cellModels赋值(利用YYmodel) //创建数据模型
-        self.cellModels = NSArray.yy_modelArrayWithClass(CSMyFileModel.self, json: self.cellInfos)!
+        self.cellModels = NSArray.modelArrayWithClass(CSMyFileModel.self, json: self.cellInfos)!
         
         //注册cell(利用自己封装的泛型方法)     //下面不需要强转为自定义的cell
         self.tableView.registerNibOf(CSMyFileTableViewCell)

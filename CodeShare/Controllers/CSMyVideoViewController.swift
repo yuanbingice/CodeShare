@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import YYModel
+import YYKit
 
 //我的视频 页面控制(继承基类的表格视图控制器类)
 class CSMyVideoViewController: CSTableViewController {
@@ -102,8 +102,7 @@ class CSMyVideoViewController: CSTableViewController {
         ]
         
         //给model赋值(利用YYKit中的YYModel,用起来比利用KVC方便)
-        cellModel = NSArray.yy_modelArrayWithClass(CSMyVideoModel.self, json: cellInfos)!
-        
+        cellModel = NSArray.modelArrayWithClass(CSMyVideoModel.self, json: cellInfos)!
         //刷新表格视图
         self.tableView.reloadData()
     }
